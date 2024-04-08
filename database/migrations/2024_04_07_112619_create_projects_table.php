@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('category');
             $table->string('url');
-            $table->date('creation_data');
+            $table->date('creation_date');
             $table->boolean('status');
             $table->text('note');
             $table->timestamps();
