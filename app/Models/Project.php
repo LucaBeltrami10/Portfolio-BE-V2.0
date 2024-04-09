@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Image;
+use App\Models\Tecnology;
 
 class Project extends Model
 {
@@ -18,4 +20,14 @@ class Project extends Model
         'status',
         'note',
     ];
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
+    public function tecnologies()
+    {
+        return $this->belongsToMany(Tecnology::class);
+    }
 }
